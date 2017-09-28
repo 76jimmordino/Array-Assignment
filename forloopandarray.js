@@ -25,25 +25,32 @@ function example2(){
 }
 
 function averagePing(list){
-  let average=0;
-  for(a=0; a<list.length; a++){
-    average= average+ list[a];
+  let average = 0;
+  for(a = 0; a<list.length; a++){
+    average = average+ list[a];
 
   }
-  average=average/list.length;
-
+  average= average / list.length;
+return average;
 }
 
-function example4(){
 
+
+function speed(list){
+
+for(let i=0; i<list.length; i++){
+  if(list[i]>95){
+    return i;
+  }
+}
 }
 
 //Creating test code
 function main(){
     console.log(smallDrink(oz));
     console.log("The total # of bits is "+example2());
-    console.log("Your average ping for internet is "+averagePing());
-    console.log("The first pitch thrown above 95 was pitch-index "+example4());
+    console.log("Your average ping for internet is "+averagePing(pings));
+    console.log("The first pitch thrown above 95 was pitch-index "+speed(speeds));
 }
 //run test code with CTRL + SHIFT + B
 main();
